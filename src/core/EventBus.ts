@@ -1,4 +1,4 @@
-import type { EventListener } from '../types/EventListener';
+import type {CarouselEventListener} from "../types/event";
 
 /**
  * Generic event bus used to register and emit typed events.
@@ -8,7 +8,7 @@ export class EventBus<TEventMap extends object> {
      * Internal listener registry grouped by event name.
      */
     private listeners: {
-        [K in keyof TEventMap]?: EventListener<TEventMap[K]>[];
+        [K in keyof TEventMap]?: CarouselEventListener<TEventMap[K]>[];
     } = {};
 
     /**
@@ -16,7 +16,7 @@ export class EventBus<TEventMap extends object> {
      */
     public on<K extends keyof TEventMap>(
         event: K,
-        listener: EventListener<TEventMap[K]>
+        listener: CarouselEventListener<TEventMap[K]>
     ): void {
         const listeners = this.listeners[event] ?? [];
         listeners.push(listener);
@@ -28,7 +28,7 @@ export class EventBus<TEventMap extends object> {
      */
     public off<K extends keyof TEventMap>(
         event: K,
-        listener: EventListener<TEventMap[K]>
+        listener: CarouselEventListener<TEventMap[K]>
     ): void {
         const listeners = this.listeners[event];
 
