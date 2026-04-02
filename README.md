@@ -4,8 +4,6 @@
 
 A modular and lightweight carousel library with a plugin system.
 
----
-
 ## Features
 
 - Lightweight and framework-agnostic
@@ -13,8 +11,6 @@ A modular and lightweight carousel library with a plugin system.
 - Clean and predictable API
 - Fully testable (TDD-friendly)
 - Optional DOM extensions via plugins
-
----
 
 ## Installation
 NPM package coming soon.
