@@ -1,4 +1,6 @@
 # ModuloCarousel
+> ⚠️ This project is currently in alpha and should not be used in production.  
+> The API may change at any time.
 
 A modular and lightweight carousel library with a plugin system.
 
@@ -15,10 +17,7 @@ A modular and lightweight carousel library with a plugin system.
 ---
 
 ## Installation
-
-```bash
-npm install modulo-carousel
-```
+NPM package coming soon.
 
 ## Quick Start
 ```javascript
